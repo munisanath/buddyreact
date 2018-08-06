@@ -1,6 +1,8 @@
 language: node_js
 node_js:
 - '8'
+install:
+  - sudo apt-get install -y sshpass
 addons:
   ssh_known_hosts: 104.211.299.97
 cache:
@@ -9,8 +11,6 @@ cache:
 script:
 - npm test
 - npm run build
-# install:
-#   - sudo apt-get install -y sshpass
 deploy:
   provider: script
   skip_cleanup: true
