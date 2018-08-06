@@ -9,8 +9,8 @@ cache:
 script:
 - npm test
 - npm run build
-install:
-  - sudo apt-get install -y sshpass
+# install:
+#   - sudo apt-get install -y sshpass
 deploy:
   provider: script
   skip_cleanup: true
