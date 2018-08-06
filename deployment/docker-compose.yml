@@ -1,0 +1,6 @@
+nodejsapp:
+ image: nodejs-webapp
+ volumes:
+  - /home/muni/volume:/home/$USER/nodejs-webapp
+ ports:
+  - 3000:3000
