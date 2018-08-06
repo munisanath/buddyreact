@@ -15,7 +15,7 @@ script:
 # - eval "$(ssh-agent -s)"
 # - chmod 600 /tmp/deploy_rsa
 # - ssh-add /tmp/deploy_rsa
-deploy:
+before_deploy:
   provider: script
   skip_cleanup: true
   script: bash deploy.sh
