@@ -1,8 +1,5 @@
-FROM ubuntu
 FROM node:8
 RUN apt-get update
-RUN mkdir /usr/app
-RUN touch /usr/app/test.txt
 RUN npm install -g create-react-app
 WORKDIR /home/$USER
 RUN create-react-app nodejs-webapp
