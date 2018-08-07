@@ -17,7 +17,7 @@ function run_commands () {
 	if [[ ! -d "$folder" ]] && [[ ! -f "$folder" ]]; then
 		mkdir -p "$folder"
 	else
-		die "$folder already exists but is not a directory"
+		"$folder already exists but is not a directory"
 	fi
 	git clone https://github.com/munisanath/nodejs-webapp.git
 	cd nodejs-webapp
