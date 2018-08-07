@@ -7,17 +7,17 @@ function run_commands () {
 	echo "login into github"
 	rm -rf nodejs-webapp
 	#directory check
-	function die() {
-	echo "$@" 1>&2
-	exit 1
-	}
+	# function die() {
+	# echo "$@" 1>&2
+	# exit 1
+	# }
 	pwd=`pwd`
 	folder="${pwd}/volume"
 
 	if [[ ! -d "$folder" ]] && [[ ! -f "$folder" ]]; then
 		mkdir -p "$folder"
 	else
-		die "$folder already exists but is not a directory" 1>&2
+		die "$folder already exists but is not a directory"
 	fi
 	git clone https://github.com/munisanath/nodejs-webapp.git
 	cd nodejs-webapp
