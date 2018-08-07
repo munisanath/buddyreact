@@ -1,3 +1,5 @@
+sudo: required
+dist: xenial
 language: node_js
 node_js:
 - '8'
@@ -6,10 +8,10 @@ addons:
 cache:
   directories:
   - node_modules
-install:
+before_install:
   - sudo apt-get install -y sshpass
   - npm install -g create-react-app
-script:
+before_script:
 - npm test
 - npm run build
 deploy:
