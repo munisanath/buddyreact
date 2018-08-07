@@ -6,15 +6,11 @@ addons:
 cache:
   directories:
   - node_modules
-script:
-- npm test
-- npm run build
-before_deploy:
-  provider: script
-  skip_cleanup: true
-  script: bash deploy.sh
-  on:
-    branch: master
+# script:
+# - npm test
+# - npm run build
+install:
+  - sudo apt-get install -y sshpass
 deploy:
   provider: script
   skip_cleanup: true
