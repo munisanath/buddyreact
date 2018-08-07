@@ -6,11 +6,12 @@ addons:
 cache:
   directories:
   - node_modules
-# script:
-# - npm test
-# - npm run build
 install:
   - sudo apt-get install -y sshpass
+  - npm install -g create-react-app
+script:
+- npm test
+- npm run build
 deploy:
   provider: script
   skip_cleanup: true
