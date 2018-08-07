@@ -10,4 +10,4 @@ function run_commands () {
 	cd nodejs-webapp/deployment
 	docker-compose up -d
 }
-sshpass -p "Suventure@2012$" ssh azureadmin@104.211.299.97 "$(typeset -f run_commands); run_commands"
+sshpass -p "Suventure@2012$" ssh azureadmin@itasset.southindia.cloudapp.azure.com "$(typeset -f run_commands); run_commands"
