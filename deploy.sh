@@ -5,6 +5,7 @@
 echo script
 function run_commands () {
 	echo "login into github"
+	pwd
 	rm -rf nodejs-webapp
 	mkdir -p volume
 	#directory check
@@ -21,10 +22,10 @@ function run_commands () {
 	# 	"$folder already exists but is not a directory"
 	# fi
 	git clone https://github.com/munisanath/nodejs-webapp.git
-	cd nodejs-webapp
-	docker build -t nodejs-webapp deployment/.
 	pwd
-	cd deployment/
-	docker-compose up -d
+	(cd nodejs-webapp && docker build -t nodejs-webapp deployment/.)
+	pwd
+	(cd nodejs-webapp/deployment && docker-compose up -d)
+	
 }
 sshpass -p "Suventure@2012$" ssh -o StrictHostKeyChecking=no azureadmin@itasset.southindia.cloudapp.azure.com "$(typeset -f run_commands); run_commands"
