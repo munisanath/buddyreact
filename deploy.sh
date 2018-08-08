@@ -23,7 +23,8 @@ function run_commands () {
 	git clone https://github.com/munisanath/nodejs-webapp.git
 	cd nodejs-webapp
 	docker build -t nodejs-webapp deployment/.
-	cd nodejs-webapp/deployment
+	pwd
+	cd deployment/
 	docker-compose up -d
 }
 sshpass -p "Suventure@2012$" ssh -o StrictHostKeyChecking=no azureadmin@itasset.southindia.cloudapp.azure.com "$(typeset -f run_commands); run_commands"
