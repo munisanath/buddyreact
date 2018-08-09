@@ -7,7 +7,7 @@ function run_commands () {
 	echo "login into github"
 	rm -rf nodejs-webapp
 	mkdir -p volume
-	git clone https://github.com/munisanath/nodejs-webapp.git
+	git clone -b master https://github.com/munisanath/nodejs-webapp.git
 	pwd
 	(cd nodejs-webapp && docker build -t nodejs-webapp .)
 	pwd
