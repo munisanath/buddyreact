@@ -5,7 +5,6 @@
 echo script
 function run_commands () {
 	echo "login into github"
-	pwd
 	rm -rf nodejs-webapp
 	mkdir -p volume
 	git clone https://github.com/munisanath/nodejs-webapp.git
