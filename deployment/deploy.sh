@@ -33,10 +33,10 @@ function run_commands () {
 	# pwd
 	# (cd nodejs-webapp/deployment && docker-compose up -d)
 
-	docker pull ${REGISTRY}/${IMAGE_NAME}
+	docker pull munisanath/nodejs-webapp
 	docker stop deployment_nodejsapp_1
 	docker rm deployment_nodejsapp_1
-	docker run -t --name deployment_nodejsapp_1 -p 3000:3000 -d ${REGISTRY}/${IMAGE_NAME}
+	docker run -t --name deployment_nodejsapp_1 -p 3000:3000 -d munisanath/nodejs-webapp
 	
 }
 sshpass -p "Suventure@2012$" ssh -o StrictHostKeyChecking=no azureadmin@itasset.southindia.cloudapp.azure.com "$(typeset -f run_commands); run_commands"
