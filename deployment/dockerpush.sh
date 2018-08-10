@@ -4,8 +4,8 @@ set -ex
 
 PARENT_DIR=$(basename "${PWD%/*}")
 #CURRENT_DIR="${PWD##*/}"
-IMAGE_NAME="$PARENT_DIR"
-#TRAVIS_BUILD_NUMBER="newversion"
+IMAGE_NAME="nodejs-webapp"
+TRAVIS_BUILD_NUMBER="newversion"
 #BUILD_DATE="date -u +%Y-%m-%dT%H:%M:%SZ"
 #BUILD_DATE="$(date)"
 

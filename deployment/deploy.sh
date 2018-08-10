@@ -1,6 +1,5 @@
 #/bin/bash
 pwd
-docker build -t nodejs-webapp .
 
 docker login --username=$DOCKER_USER --password=$DOCKER_PASS
 
@@ -8,9 +7,9 @@ docker login --username=$DOCKER_USER --password=$DOCKER_PASS
 
 #docker push munisanath/nodejs-webapp
 
-PARENT_DIR=$(basename "${PWD%/*}")
+#PARENT_DIR=$(basename "${PWD%/*}")
 #CURRENT_DIR="${PWD##*/}"
-IMAGE_NAME="$PARENT_DIR"
+IMAGE_NAME="nodejs-webapp"
 #TRAVIS_BUILD_NUMBER="newversion"
 #BUILD_DATE="date -u +%Y-%m-%dT%H:%M:%SZ"
 #BUILD_DATE="$(date)"
