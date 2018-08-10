@@ -1,5 +1,5 @@
 nodejsapp:
- image: nodejs-webapp
+ image: nodejs-webapp:latest
  volumes:
   - /home/$USER/volume:/home/$USER/nodejs-webapp
  ports:
