@@ -1,6 +1,6 @@
 #/bin/bash
 pwd
-docker build -f deployment/Dockerfile -t nodejs-webapp .
+docker build -t nodejs-webapp .
 
 docker login --username=$DOCKER_USER --password=$DOCKER_PASS
 
