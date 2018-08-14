@@ -39,5 +39,5 @@ function run_commands () {
 	docker run -t --name deployment_nodejsapp_1 -p 3000:3000 -d munisanath/nodejs-webapp
 	
 }
-ssh -i -o StrictHostKeyChecking=no azureadmin@itasset.southindia.cloudapp.azure.com "$(typeset -f run_commands); run_commands"
+ssh -i ./deploy_key -o StrictHostKeyChecking=no azureadmin@itasset.southindia.cloudapp.azure.com "$(typeset -f run_commands); run_commands"
 #sshpass -p "password" ssh -o StrictHostKeyChecking=no azureadmin@itasset.southindia.cloudapp.azure.com "$(typeset -f run_commands); run_commands"

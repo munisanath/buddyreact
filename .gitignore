@@ -26,4 +26,4 @@
 # echo "deploy_key" >> .gitignore
 # gem install travis
 # touch .travis.yml && travis encrypt-file deploy_key --add
-/deploy_key
+#/deploy_key
