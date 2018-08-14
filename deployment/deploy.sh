@@ -24,7 +24,7 @@ docker push ${REGISTRY}/${IMAGE_NAME}
 
 echo script
 function run_commands () {
-	echo "login into github"
+	echo "login into Docker hub"
 	# rm -rf nodejs-webapp
 	# mkdir -p volume
 	# git clone -b master https://github.com/munisanath/nodejs-webapp.git
@@ -39,5 +39,5 @@ function run_commands () {
 	docker run -t --name deployment_nodejsapp_1 -p 3000:3000 -d munisanath/nodejs-webapp
 	
 }
-ssh -o StrictHostKeyChecking=no azureadmin@itasset.southindia.cloudapp.azure.com "$(typeset -f run_commands); run_commands"
+ssh azureadmin@itasset.southindia.cloudapp.azure.com "$(typeset -f run_commands); run_commands"
 #sshpass -p "password" ssh -o StrictHostKeyChecking=no azureadmin@itasset.southindia.cloudapp.azure.com "$(typeset -f run_commands); run_commands"
